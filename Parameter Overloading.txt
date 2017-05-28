@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int myabs(int num) {
+	if (num < 0)
+		num = -num;
+	return num;
+}
+
+double myabs(double num){
+	if (num < 0)
+		num = -num;
+	return num;
+}
+
+long myabs(long num) {
+	if (num < 0)
+		num = -num;
+	return num;
+}
+
+void main()
+
+{
+	int a = -10;
+	cout << a << "의 절값은->" << myabs(a) << endl;
+
+	double b = -3.4;
+	cout << b << "의 절댓값은->" << myabs(b) << endl;
+
+	long c = -20L;
+	cout << c << "의 절댓값은->" << myabs(c) << endl;
+}
