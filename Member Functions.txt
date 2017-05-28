@@ -1,0 +1,44 @@
+
+#include <iostream>
+using namespace std;
+class Complex
+{
+private:
+	int real;
+	int image;
+
+public:
+	void setComplex();
+	void showComplex();
+	void setReal(int r);
+	void setImage(int i);
+	
+};
+
+void Complex::setComplex()
+{
+
+real = 2;
+image = 5;
+}
+void Complex::showComplex(){
+	cout << "(" << real << "+" << image << "i)" << endl;
+}
+
+void Complex::setReal(int r) {
+	real = r;
+}
+
+void Complex::setImage(int i){
+	image = i;
+
+}
+
+void main()
+{
+	Complex x, y;
+	x.setComplex();
+	x.showComplex();
+	y.setComplex();
+	y.showComplex();
+}
