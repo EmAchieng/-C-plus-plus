@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+class Test{
+	int num;
+public:
+	void init();
+	void prn();
+};
+
+void Test::init()
+{
+	num = 20;
+}
+void Test::prn()	{
+	cout << num << "\n";
+}
+
+void main()
+{
+	Test a, *p;
+	p = &a;
+
+	
+	
+	cout << "\n p->Test()=>";
+	a.init();
+
+
+	cout << "\n  Test=>";
+	a.prn();
+
+	cout << "\n p->init()=>";
+	p->init();
+
+	p = &a;
+	cout << " \n p->prn()=>";
+	p->prn();
+
+
+}
