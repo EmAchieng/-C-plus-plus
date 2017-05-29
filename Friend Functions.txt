@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+class abc{
+	int a;
+public:
+	void init();
+	friend void prn(abc &, int);
+
+};
+
+void abc::init()
+{
+	a = 10;
+}
+
+void prn(abc &k, int val)
+{
+	k.a = val;
+}
+
+void main()
+{
+	abc k;
+	cout << "\n abc.a before:";
+	k.init();
+
+	prn(k, 20);
+	cout << "\n abc.a after:";
+	k.init();
+
+	
+	
+}
