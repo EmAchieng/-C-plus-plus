@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+class StaticTest{
+public:
+	static int sint;
+	int nint;
+	StaticTest(){
+		nint = 100;
+	}
+};
+
+int StaticTest::sint = 100;
+
+void main(){
+	StaticTest a, b, c;
+
+	cout << "1";
+	cout << a.sint << ",";
+	cout << b.sint << ",";
+	cout << c.sint << endl;
+
+	cout << "2";
+	cout << a.nint << ",";
+	cout << b.nint << ",";
+	cout << c.nint << endl;
+
+	a.sint = 0;
+	a.nint = 0;
+
+	cout << "3";
+	cout << a.sint << ",";
+	cout << b.sint << ",";
+	cout << c.sint << endl;
+
+	cout << "4";
+	cout << a.nint << ",";
+	cout << b.nint << ",";
+	cout << c.nint << endl;
+}
