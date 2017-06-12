@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+class Base{
+protected:
+	int a;
+	int b;
+	int c;
+public:
+	Base();
+	Base(int a, int b, int c);
+	~Base();
+};
+Base::Base()
+{
+	cout << "Parent of a default constructor calls the class" << endl;
+
+}
+Base::Base(int a, int b, int c)
+{
+	cout << "Parent Class 3 old argument constructor call" << endl;
+	this->a = a; this->b = b; this->c = c;
+}
+
+Base::~Base()
+{
+	cout << "Parent class of a destructor call" << endl;
+}
+class Derived : public	Base{
+public:
+	Derived();
+	Derived(int a, int b, int c);
+	~Derived();
+};
+Derived::~Derived()
+{
+	cout << "Derived class destructor calls" << endl;
+}
+Derived::Derived()
+{
+	cout << "Derived classes call the default constructor" << endl;
+}
+Derived::Derived(int a, int b, int c) : Base(a, b, c)
+{
+	cout << "Derived class constructor call argument 3 star" << endl;
+}
+
+
+void main()
+{
+	Derived one;
+	Derived two(10, 20, 30);
+}
